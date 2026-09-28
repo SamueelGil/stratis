@@ -1,0 +1,35 @@
+[project]
+name = "stratis"
+version = "0.1.0"
+description = "Statistical Tennis Result Analysis & Inference System"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "xgboost",
+    "skl2onnx",
+    "onnxruntime",
+    "scipy",
+    "statsmodels",
+    "shap",
+    "requests",
+    "beautifulsoup4",
+    "joblib",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+st-migrate  = "ingestion.csv_migrator:main"
+st-validate = "ingestion.schema_validator:main"
+
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["stratis*"]
