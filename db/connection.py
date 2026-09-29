@@ -1,7 +1,7 @@
 import sqlite3
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = PROJECT_ROOT / "data" / "tennis.db"
 SCHEMA_PATH = PROJECT_ROOT / "schema.sql"
 

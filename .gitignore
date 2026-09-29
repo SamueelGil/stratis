@@ -1,0 +1,7 @@
+.venv/
+data/*.db
+data/*.db-wal
+data/*.db-shm
+*.pyc
+__pycache__/
+*.egg-info/
